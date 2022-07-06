@@ -11,7 +11,7 @@ public enum CardType
 
 public class Card : MonoBehaviour
 {
-    CardAsset cardAsset;
+    public CardAsset cardAsset;
     int cardID;
     int cardCost;
     string cardName;
@@ -23,14 +23,12 @@ public class Card : MonoBehaviour
     //spell
     string spellEffectName;
 
-    //survent
+    //survent or enemy
     int hp;
     int atk;
     bool isTank;
     bool isCharged;
-
-    //enemy
-    string effectName;
+    string actionEffectName;
     void LoadCardInfo()
 	{
         cardID = cardAsset.cardID;
@@ -39,20 +37,20 @@ public class Card : MonoBehaviour
         cardType = cardAsset.cardType;
         cardDescription = cardAsset.cardDescription;
         cardCamp = cardAsset.cardCamp;
-        
+        cardBackground = cardAsset.cardBackground;
+
         switch (cardType)
 		{
             case CardType.SPELL:
                 spellEffectName = cardAsset.spellEffectName;
                 break;
             case CardType.SURVENT:
+            case CardType.ENEMY:
                 hp = cardAsset.hp;
                 atk = cardAsset.atk;
                 isTank = cardAsset.isTank;
                 isCharged = cardAsset.isCharged;
-                break;
-            case CardType.ENEMY:
-                effectName = cardAsset.effectName;
+                actionEffectName = cardAsset.actionEffectName;
                 break;
             default:
                 break;
