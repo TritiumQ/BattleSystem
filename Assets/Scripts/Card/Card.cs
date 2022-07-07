@@ -19,15 +19,24 @@ public class Card : MonoBehaviour
     string cardDescription;
     string cardCamp;
     Image cardBackground;
-
+    
     //spell
     string spellEffectName;
+    bool copyType;
 
     //survent or enemy
     int hp;
+    int maxHp;
     int atk;
     bool isTank;
     bool isCharged;
+    bool isDeathrattle;
+    int isHidden;
+    int isProtect;
+    bool isVampire;
+    bool isCombo;
+    int isSilence;
+    string deathrattleEffectName;
     string actionEffectName;
     void LoadCardInfo()
 	{
@@ -43,6 +52,7 @@ public class Card : MonoBehaviour
 		{
             case CardType.SPELL:
                 spellEffectName = cardAsset.spellEffectName;
+                copyType = cardAsset.copyType;
                 break;
             case CardType.SURVENT:
             case CardType.ENEMY:
@@ -50,6 +60,13 @@ public class Card : MonoBehaviour
                 atk = cardAsset.atk;
                 isTank = cardAsset.isTank;
                 isCharged = cardAsset.isCharged;
+                isDeathrattle = cardAsset.isDeathrattle;
+                isHidden = cardAsset.isHidden;
+                isProtect = cardAsset.isProtect;
+                isVampire = cardAsset.isVampire;
+                isCombo = cardAsset.isCombo;
+                isSilence = cardAsset.isSilence;
+                deathrattleEffectName = cardAsset.deathrattleEffectName;
                 actionEffectName = cardAsset.actionEffectName;
                 break;
             default:
