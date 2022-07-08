@@ -2,13 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public enum CardType
-{
-    ENEMY,
-    SPELL,
-    SURVENT
-}
-
 public class Card : MonoBehaviour
 {
     public CardAsset cardAsset;
@@ -17,12 +10,12 @@ public class Card : MonoBehaviour
     string cardName;
     CardType cardType;  //SPELL,SURVENT,ENEMY
     string cardDescription;
-    string cardCamp;
+    CardCamp cardCamp;
     Image cardBackground;
     
     //spell
     string spellEffectName;
-    bool copyType;
+    bool isCopied;
 
     //survent or enemy
     int hp;
@@ -52,7 +45,7 @@ public class Card : MonoBehaviour
 		{
             case CardType.SPELL:
                 spellEffectName = cardAsset.spellEffectName;
-                copyType = cardAsset.copyType;
+                isCopied = cardAsset.isCopied;
                 break;
             case CardType.SURVENT:
             case CardType.ENEMY:
@@ -62,7 +55,7 @@ public class Card : MonoBehaviour
                 isCharged = cardAsset.isCharged;
                 isDeathrattle = cardAsset.isDeathrattle;
                 isHidden = cardAsset.isHidden;
-                isProtected = cardAsset.isProtect;
+                isProtected = cardAsset.isProtected;
                 isVampire = cardAsset.isVampire;
                 isCombo = cardAsset.isCombo;
                 isSilence = cardAsset.isSilence;
