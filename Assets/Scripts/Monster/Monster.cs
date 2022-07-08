@@ -5,6 +5,7 @@ using UnityEngine;
 public class Monster : ScriptableObject
 {
     MonsterAsset monsterAsset;
+    MonsterActionLogic actionLogic;
     int monsterId;
     string monsterName;
     int hp;

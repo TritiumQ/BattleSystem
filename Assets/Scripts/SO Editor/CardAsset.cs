@@ -17,7 +17,7 @@ public class CardAsset : ScriptableObject
     public bool copyType;   //复制体标记
 
 
-    [Header("Survent card info")]
+    [Header("Survent or Enemy card info")]
     public int hp;          //当前生命值
     public int maxHp;       //生命值上限
     public int atk;         //攻击力

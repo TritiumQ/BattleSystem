@@ -32,7 +32,7 @@ public class Card : MonoBehaviour
     bool isCharged;
     bool isDeathrattle;
     int isHidden;
-    int isProtect;
+    int isProtected;
     bool isVampire;
     bool isCombo;
     int isSilence;
@@ -62,7 +62,7 @@ public class Card : MonoBehaviour
                 isCharged = cardAsset.isCharged;
                 isDeathrattle = cardAsset.isDeathrattle;
                 isHidden = cardAsset.isHidden;
-                isProtect = cardAsset.isProtect;
+                isProtected = cardAsset.isProtect;
                 isVampire = cardAsset.isVampire;
                 isCombo = cardAsset.isCombo;
                 isSilence = cardAsset.isSilence;

@@ -6,6 +6,6 @@ public class Player : MonoBehaviour
 {
     int maxHP;
     int curentHP;
-    ArrayList cardSet;
+    List<Card> cardSet;
 
 }
