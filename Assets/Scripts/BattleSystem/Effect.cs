@@ -14,7 +14,7 @@ public enum CardType
 }
 public static class Effect
 {
-    public static void Attack(int _damage) //ÆÕÍ¨¹¥»÷
+	public static void Attack(int _damage) //ÆÕÍ¨¹¥»÷
 	{
 
 	}

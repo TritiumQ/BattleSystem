@@ -7,5 +7,5 @@ public class Player : MonoBehaviour
     int maxHP;
     int curentHP;
     List<Card> cardSet;
-
+    List<Card> battleCardSet;
 }
